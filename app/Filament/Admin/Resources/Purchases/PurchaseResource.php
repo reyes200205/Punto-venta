@@ -9,6 +9,7 @@ use App\Filament\Admin\Resources\Purchases\Schemas\PurchaseForm;
 use App\Filament\Admin\Resources\Purchases\Tables\PurchasesTable;
 use App\Models\Purchase;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -17,6 +18,11 @@ use Filament\Tables\Table;
 class PurchaseResource extends Resource
 {
     protected static ?string $model = Purchase::class;
+
+    protected static ?string $navigationLabel = 'Compras';
+    
+    protected static string | UnitEnum | null $navigationGroup = 'Abastecimento';
+
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

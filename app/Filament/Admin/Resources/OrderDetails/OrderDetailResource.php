@@ -18,6 +18,11 @@ class OrderDetailResource extends Resource
 {
     protected static ?string $model = OrderDetail::class;
 
+    public static function shouldRegisterNavigation(): bool
+    {
+        return false;
+    }
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static ?string $recordTitleAttribute = 'id';

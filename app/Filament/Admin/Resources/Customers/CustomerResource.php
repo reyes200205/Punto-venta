@@ -9,6 +9,7 @@ use App\Filament\Admin\Resources\Customers\Schemas\CustomerForm;
 use App\Filament\Admin\Resources\Customers\Tables\CustomersTable;
 use App\Models\Customer;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -19,6 +20,8 @@ class CustomerResource extends Resource
     protected static ?string $model = Customer::class;
 
     protected static ?string $navigationLabel = 'Clientes';
+
+    protected static string | UnitEnum | null $navigationGroup = 'Ventas';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

@@ -9,6 +9,7 @@ use App\Filament\Admin\Resources\Orders\Schemas\OrderForm;
 use App\Filament\Admin\Resources\Orders\Tables\OrdersTable;
 use App\Models\Order;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -18,7 +19,11 @@ class OrderResource extends Resource
 {
     protected static ?string $model = Order::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::ShoppingBag;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Ventas';
+
+    protected static ?string $navigationLabel = 'Ordenes';
 
     protected static ?string $recordTitleAttribute = 'id';
 

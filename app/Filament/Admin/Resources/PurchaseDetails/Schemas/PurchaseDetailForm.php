@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Filament\Admin\Resources\OrderDetails\Schemas;
+namespace App\Filament\Admin\Resources\PurchaseDetails\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
-class OrderDetailForm
+class PurchaseDetailForm
 {
     public static function configure(Schema $schema): Schema
     {
         return $schema
             ->components([
-                TextInput::make('order_id')
+                TextInput::make('purchase_id')
                     ->required()
                     ->numeric(),
                 TextInput::make('product_id')
